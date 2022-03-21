@@ -1,4 +1,4 @@
-# 虚假夸大模型
+# 模型蒸馏
 
 ## 运行手册
 ### 代码结构
@@ -9,13 +9,6 @@ root
 |-- model: 模型目录，训练得到的模型也将存储在该目录
 |    |-- class_id.txt: 虚假夸大的细分类别及其对应id
 |    |-- vocab.txt: ernie、gru、textcnn公用的字典
-|-- pyweb: 部署网络服务的代码
-|    |-- bin:
-|    |    |-- run.sh: 启动网络服务的脚本
-|    |-- src:
-|    |    |-- fake_or_exaggeration_service.py: 网络服务的实现代码，基于tornado
-|    |-- templates:
-|    |    |-- index.html: 网页模板
 |-- src:
 |    |-- nets: 神经网络结构
 |    |    |-- __init__.py:
@@ -106,6 +99,3 @@ ernie模型finetune后作为teacher模型，蒸馏得到textcnn模型。
 
 
 参考论文：[Distilling the Knowledge in a Neural Network](https://arxiv.org/pdf/1503.02531.pdf)
-
-[distilling_performance]: http://agroup.baidu.com/api/static/bj/-5c768808234704894cc3128c15f001f80371bc2b?filename=%E6%A8%A1%E5%9E%8B%E8%92%B8%E9%A6%8F%E6%95%88%E6%9E%9C.png
-[distilling_structure]: http://agroup.baidu.com/api/static/bj/-477a8a53bcb4c1dadd6a7cb01670cfe80e38dda3?filename=%E6%A8%A1%E5%9E%8B%E8%92%B8%E9%A6%8F.png
