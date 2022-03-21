@@ -1,0 +1,6 @@
+numpy<=1.16.4,>=1.12
+paddle-ernie==0.0.4.dev1
+opencv-python==4.2.0.32
+paddlepaddle-gpu==1.8.1.post107
+scikit-learn
+tornado
